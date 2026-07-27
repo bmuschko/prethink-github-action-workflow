@@ -46,8 +46,7 @@ repositories, and an in-memory H2 database.
 [`.github/workflows/prethink.yml`](.github/workflows/prethink.yml) runs weekly (and
 on demand from the Actions tab). It installs the Moderne CLI, builds the LST, runs
 the Prethink recipe to regenerate the `.moderne/context/` files, and opens a pull
-request with the changes. No Moderne login or LLM provider configuration is
-required.
+request with the changes. No Moderne login is required.
 
 See the
 [Prethink documentation](https://docs.moderne.io/user-documentation/agent-tools/prethink/)
