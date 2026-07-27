@@ -12,13 +12,6 @@ permissions:
   contents: write        # push the branch
   pull-requests: write   # open the PR
 
-env:
-  # Recipe artifact coordinates. Pin a version here instead of LATEST if desired.
-  MODERNE_RECIPE_ARTIFACT: io.moderne.recipe:rewrite-prethink:LATEST
-  # Prethink starter recipe. Generates the .moderne/context/ files; no LLM
-  # provider configuration required.
-  PRETHINK_RECIPE: io.moderne.prethink.UpdatePrethinkContextStarter
-
 jobs:
   prethink:
     runs-on: ubuntu-latest
@@ -46,13 +39,14 @@ jobs:
           mod --version
 
       - name: Install the Prethink recipe
-        run: mod config recipes jar install "$MODERNE_RECIPE_ARTIFACT"
+        # Pin a version instead of LATEST if reproducible runs are desired.
+        run: mod config recipes jar install "io.moderne.recipe:rewrite-prethink:LATEST"
 
       - name: Build (or download) the LST
         run: mod build .
 
       - name: Run the Prethink recipe
-        run: mod run . --recipe "$PRETHINK_RECIPE"
+        run: mod run . --recipe "io.moderne.prethink.UpdatePrethinkContextStarter"
 
       - name: Apply generated context files to the working tree
         run: mod git apply . --last-recipe-run
