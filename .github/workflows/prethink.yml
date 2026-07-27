@@ -40,9 +40,9 @@ jobs:
           set -euo pipefail
           # Install the latest CLI via the official install script.
           curl -fsSL https://app.moderne.io/cli | bash
-          # The script drops `mod` under ~/.moderne/cli — put it on PATH.
-          echo "$HOME/.moderne/cli" >> "$GITHUB_PATH"
-          export PATH="$HOME/.moderne/cli:$PATH"
+          # The script drops `mod` under ~/.moderne/cli/bin — put it on PATH.
+          echo "$HOME/.moderne/cli/bin" >> "$GITHUB_PATH"
+          export PATH="$HOME/.moderne/cli/bin:$PATH"
           mod --version
 
       - name: Install the Prethink recipe
