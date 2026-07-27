@@ -13,9 +13,7 @@ permissions:
   pull-requests: write   # open the PR
 
 env:
-  # Moderne tenant + recipe artifact coordinates. Override here if you use an
-  # enterprise tenant (e.g. https://<tenant>.moderne.io) or pin a recipe version.
-  MODERNE_URL: https://app.moderne.io
+  # Recipe artifact coordinates. Pin a version here instead of LATEST if desired.
   MODERNE_RECIPE_ARTIFACT: io.moderne.recipe:rewrite-prethink:LATEST
   # Prethink starter recipe. Generates the .moderne/context/ files; no LLM
   # provider configuration required.
@@ -37,9 +35,7 @@ jobs:
           distribution: temurin
           java-version: "25"
 
-      - name: Install and configure the Moderne CLI
-        env:
-          MODERNE_TOKEN: ${{ secrets.MODERNE_TOKEN }}
+      - name: Install the Moderne CLI
         run: |
           set -euo pipefail
           # Install the latest CLI via the official install script.
@@ -48,9 +44,6 @@ jobs:
           echo "$HOME/.moderne/cli" >> "$GITHUB_PATH"
           export PATH="$HOME/.moderne/cli:$PATH"
           mod --version
-          # Connect to the tenant and authenticate with a Moderne access token.
-          mod config moderne edit "$MODERNE_URL"
-          mod config moderne login --with-token "$MODERNE_TOKEN"
 
       - name: Install the Prethink recipe
         run: mod config recipes jar install "$MODERNE_RECIPE_ARTIFACT"
