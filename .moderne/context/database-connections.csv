@@ -1,0 +1,5 @@
+Entity ID,Source path,Entity/Table name,Entity class,Repository class,Connection type,Database type
+entity:com.example.orders.domain.Customer,src/main/java/com/example/orders/domain/Customer.java,Customer,com.example.orders.domain.Customer,,JPA,
+entity:com.example.orders.domain.Order,src/main/java/com/example/orders/domain/Order.java,orders,com.example.orders.domain.Order,,JPA,
+repository:com.example.orders.repository.OrderRepository,src/main/java/com/example/orders/repository/OrderRepository.java,Order,com.example.orders.domain.Order,com.example.orders.repository.OrderRepository,Spring Data JPA,
+repository:com.example.orders.repository.CustomerRepository,src/main/java/com/example/orders/repository/CustomerRepository.java,Customer,com.example.orders.domain.Customer,com.example.orders.repository.CustomerRepository,Spring Data JPA,
