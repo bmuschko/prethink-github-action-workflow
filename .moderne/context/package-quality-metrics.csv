@@ -1,0 +1,8 @@
+Package name,Afferent coupling (Ca),Efferent coupling (Ce),Instability,Abstractness,Distance from main sequence,In cycle,Cycle members
+com.example.orders.service,1,4,0.8,0.0,0.19999999999999996,false,
+com.example.orders.exception,1,0,0.0,0.0,1.0,false,
+com.example.orders.repository,2,1,0.3333333333333333,1.0,0.33333333333333326,false,
+com.example.orders.controller,0,4,1.0,0.0,0.0,false,
+com.example.orders.domain,3,0,0.0,0.0,1.0,false,
+com.example.orders.dto,2,0,0.0,0.0,1.0,false,
+com.example.orders,0,0,0.0,0.0,1.0,false,
