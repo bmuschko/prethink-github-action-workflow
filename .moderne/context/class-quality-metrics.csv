@@ -1,0 +1,17 @@
+Source path,Class name,Line count,Method count,Field count,WMC,LCOM4,TCC,CBO,Maintainability index
+src/main/java/com/example/orders/domain/Order.java,com.example.orders.domain.Order,72,13,7,13,8,0.0641025641025641,1,79.49449675221823
+src/main/java/com/example/orders/domain/OrderItem.java,com.example.orders.domain.OrderItem,33,6,3,6,2,0.4,1,76.82351547044601
+src/main/java/com/example/orders/domain/Customer.java,com.example.orders.domain.Customer,58,11,5,11,4,0.18181818181818182,0,78.7971612333932
+src/main/java/com/example/orders/dto/OrderLineRequest.java,com.example.orders.dto.OrderLineRequest,36,6,3,6,3,0.2,0,78.54878756521178
+src/main/java/com/example/orders/dto/CreateOrderRequest.java,com.example.orders.dto.CreateOrderRequest,36,6,3,6,3,0.2,0,78.54878756521178
+src/main/java/com/example/orders/OrderServiceApplication.java,com.example.orders.OrderServiceApplication,8,1,0,1,1,1.0,1,71.82888922672883
+src/main/java/com/example/orders/exception/OrderNotFoundException.java,com.example.orders.exception.OrderNotFoundException,7,1,0,1,1,1.0,1,73.97468378825788
+src/main/java/com/example/orders/repository/OrderRepository.java,com.example.orders.repository.OrderRepository,7,2,0,2,2,0.0,0,87.99721632185675
+src/main/java/com/example/orders/repository/CustomerRepository.java,com.example.orders.repository.CustomerRepository,5,1,0,1,1,1.0,0,84.61819053717403
+src/main/java/com/example/orders/controller/CustomerController.java,com.example.orders.controller.CustomerController,22,3,1,3,1,1.0,6,70.56768404092482
+src/main/java/com/example/orders/controller/OrderController.java,com.example.orders.controller.OrderController,37,6,1,6,1,1.0,4,73.7892087613144
+src/main/java/com/example/orders/service/PricingService.java,com.example.orders.service.PricingService,71,3,0,16,1,0.0,5,51.80092501031791
+src/main/java/com/example/orders/service/NotificationService.java,com.example.orders.service.NotificationService,21,2,1,3,1,1.0,3,64.54592617639923
+src/main/java/com/example/orders/service/OrderService.java,com.example.orders.service.OrderService,65,6,4,9,1,1.0,14,62.5460137668602
+src/main/java/com/example/orders/service/LegacyOrderReport.java,com.example.orders.service.LegacyOrderReport,63,2,0,10,1,0.0,8,46.71546185751656
+src/test/java/com/example/orders/service/PricingServiceTest.java,com.example.orders.service.PricingServiceTest,32,3,1,3,1,1.0,6,62.937651179137816
