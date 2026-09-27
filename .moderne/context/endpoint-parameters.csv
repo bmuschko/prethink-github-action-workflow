@@ -1,0 +1,6 @@
+Endpoint ID,Parameter name,Parameter kind,Type FQN,Type resolution,Format,Required,Default value,Java parameter name
+endpoint:com.example.orders.controller.OrderController#get(Long),id,path,java.lang.Long,resolved,int64,true,,id
+endpoint:com.example.orders.controller.OrderController#place(Long),id,path,java.lang.Long,resolved,int64,true,,id
+endpoint:com.example.orders.controller.OrderController#ship(Long),id,path,java.lang.Long,resolved,int64,true,,id
+endpoint:com.example.orders.controller.OrderController#byCustomer(Long),customerId,query,java.lang.Long,resolved,int64,true,,customerId
+endpoint:com.example.orders.controller.CustomerController#get(Long),id,path,java.lang.Long,resolved,int64,true,,id

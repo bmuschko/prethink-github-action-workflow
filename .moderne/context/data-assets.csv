@@ -1,0 +1,5 @@
+Source path,Class name,Simple name,Asset type,Description,Fields
+src/main/java/com/example/orders/dto/OrderLineRequest.java,com.example.orders.dto.OrderLineRequest,OrderLineRequest,DTO,"DTO order line request with fields: sku, quantity, unitPrice","sku, quantity, unitPrice"
+src/main/java/com/example/orders/dto/CreateOrderRequest.java,com.example.orders.dto.CreateOrderRequest,CreateOrderRequest,DTO,"DTO create order request with fields: customerId, lines, couponCode","customerId, lines, couponCode"
+src/main/java/com/example/orders/domain/Order.java,com.example.orders.domain.Order,Order,Entity,"Entity order with fields: id, customerId, status, items, total and 2 more","id, customerId, status, items, total, currency, createdAt"
+src/main/java/com/example/orders/domain/Customer.java,com.example.orders.domain.Customer,Customer,Entity,"Entity customer with fields: id, name, email, tier, active","id, name, email, tier, active"
