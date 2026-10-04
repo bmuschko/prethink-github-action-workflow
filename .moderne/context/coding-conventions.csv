@@ -1,0 +1,15 @@
+Convention type,Pattern,Example,Frequency,Scope
+naming,Exception suffix for classes,OrderNotFoundException,,project-wide
+comments,Classes have Javadoc documentation,NotificationService,,project-wide
+naming,Service suffix for classes,NotificationService,,project-wide
+naming,camelCase for constants,log,,project-wide
+naming,create* method naming pattern,createOrder,,project-wide
+naming,get* method naming pattern,getOrder,,project-wide
+comments,Methods have Javadoc documentation,discountRate,,project-wide
+naming,Repository suffix for classes,CustomerRepository,,project-wide
+naming,find* method naming pattern,findByEmail,,project-wide
+naming,set* method naming pattern,setSku,,project-wide
+naming,is* method naming pattern,isActive,,project-wide
+naming,Controller suffix for classes,OrderController,,project-wide
+imports,Static imports from org.junit.jupiter.api,org.junit.jupiter.api.Assertions.assertEquals,,project-wide
+naming,Test suffix for classes,PricingServiceTest,,project-wide
