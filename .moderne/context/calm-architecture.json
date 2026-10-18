@@ -1,0 +1,122 @@
+{
+  "nodes" : [ {
+    "unique-id" : "create-order-request-data",
+    "node-type" : "data-asset",
+    "name" : "CreateOrderRequest",
+    "description" : "DTO create order request with fields: customerId, lines, couponCode"
+  }, {
+    "unique-id" : "customer-controller",
+    "node-type" : "service",
+    "name" : "CustomerController",
+    "description" : "REST API with endpoints: POST /api/customers, GET /api/customers/{id}",
+    "interfaces" : [ {
+      "unique-id" : "customer-controller-api",
+      "port" : 8080
+    } ]
+  }, {
+    "unique-id" : "customer-db",
+    "node-type" : "database",
+    "name" : "Customer Store",
+    "description" : "SQL database for Customer data"
+  }, {
+    "unique-id" : "order-controller",
+    "node-type" : "service",
+    "name" : "OrderController",
+    "description" : "REST API with endpoints: POST /api/orders, GET /api/orders/{id}, POST /api/orders/{id}/place, POST /api/orders/{id}/ship, GET /api/orders and 0 more",
+    "interfaces" : [ {
+      "unique-id" : "order-controller-api",
+      "port" : 8080
+    } ]
+  }, {
+    "unique-id" : "order-db",
+    "node-type" : "database",
+    "name" : "Order Store",
+    "description" : "SQL database for Order data"
+  }, {
+    "unique-id" : "orders-db",
+    "node-type" : "database",
+    "name" : "orders Store",
+    "description" : "SQL database for orders data"
+  } ],
+  "relationships" : [ {
+    "unique-id" : "customer-controller-calls-customer-controller",
+    "relationship-type" : {
+      "interacts" : {
+        "actor" : "customer-controller",
+        "nodes" : [ "customer-controller" ]
+      }
+    }
+  }, {
+    "unique-id" : "customer-controller-calls-customer-db",
+    "relationship-type" : {
+      "interacts" : {
+        "actor" : "customer-controller",
+        "nodes" : [ "customer-db" ]
+      }
+    }
+  }, {
+    "unique-id" : "customer-controller-calls-order-db",
+    "relationship-type" : {
+      "interacts" : {
+        "actor" : "customer-controller",
+        "nodes" : [ "order-db" ]
+      }
+    }
+  }, {
+    "unique-id" : "customer-controller-to-customer-db",
+    "relationship-type" : {
+      "connects" : {
+        "source" : {
+          "node" : "customer-controller"
+        },
+        "destination" : {
+          "node" : "customer-db"
+        }
+      }
+    },
+    "protocol" : "JDBC"
+  }, {
+    "unique-id" : "customer-controller-to-order-db",
+    "relationship-type" : {
+      "connects" : {
+        "source" : {
+          "node" : "customer-controller"
+        },
+        "destination" : {
+          "node" : "order-db"
+        }
+      }
+    },
+    "protocol" : "JDBC"
+  }, {
+    "unique-id" : "customer-controller-to-orders-db",
+    "relationship-type" : {
+      "connects" : {
+        "source" : {
+          "node" : "customer-controller"
+        },
+        "destination" : {
+          "node" : "orders-db"
+        }
+      }
+    },
+    "protocol" : "JDBC"
+  }, {
+    "unique-id" : "customer-controller-uses-create-order-request-data",
+    "relationship-type" : {
+      "interacts" : {
+        "actor" : "customer-controller",
+        "nodes" : [ "create-order-request-data" ]
+      }
+    }
+  }, {
+    "unique-id" : "order-controller-calls-customer-controller",
+    "relationship-type" : {
+      "interacts" : {
+        "actor" : "order-controller",
+        "nodes" : [ "customer-controller" ]
+      }
+    }
+  } ],
+  "$schema" : "https://calm.finos.org/draft/2025-03/meta/calm.json"
+}
