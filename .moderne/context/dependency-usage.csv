@@ -1,0 +1,11 @@
+Library,Top-level package,Usage pattern,Common classes,Import count,Example usage
+jakarta.persistence:jakarta.persistence-api:3.1.0,jakarta.persistence,,"Entity, GeneratedValue, GenerationType, Id, ElementCollection, Embeddable, EnumType, Enumerated",1,
+jakarta.validation:jakarta.validation-api:3.0.2,jakarta.validation,,"NotNull, Valid, Min, NotBlank, NotEmpty",1,
+org.junit.jupiter:junit-jupiter-api:5.10.5,org.junit.jupiter,,Test,1,
+org.slf4j:slf4j-api:2.0.16,org.slf4j,,"Logger, LoggerFactory",1,
+org.springframework.boot:spring-boot-autoconfigure:3.3.5,org.springframework.boot,,SpringBootApplication,1,
+org.springframework.boot:spring-boot:3.3.5,org.springframework.boot,,SpringApplication,1,
+org.springframework.data:spring-data-jpa:3.3.5,org.springframework.data,,JpaRepository,1,
+org.springframework:spring-context:6.1.14,org.springframework,,Service,1,
+org.springframework:spring-tx:6.1.14,org.springframework,,Transactional,1,
+org.springframework:spring-web:6.1.14,org.springframework,,"ResponseEntity, GetMapping, HttpStatus, PathVariable, PostMapping, RequestBody, RequestMapping, RestController",1,
